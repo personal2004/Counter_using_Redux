@@ -5,7 +5,7 @@ export const FETCH_PRODUCTS_FAILURE = 'FETCH_PRODUCTS_FAILURE';
 
 export const fetchProducts = () => async dispatch => {
   try {
-    const response = await axios.get('https://dummyapi.online/api/movies');
+    const response = await axios.get('https://api.restful-api.dev/objects');
     dispatch({
       type: FETCH_PRODUCTS_SUCCESS,
       payload: response.data,

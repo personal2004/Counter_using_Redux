@@ -20,19 +20,13 @@ const App=()=>{
      <h1>Hi</h1>
   
     <div className="product-list">
-    { products !== undefined &&
-
-    products.map((product) => (
-      <div key={product.id}>
+    { products !== undefined && products.map((product,index) => (
+      <div key={index}>
             <h2>{product.name}</h2>
-            {product.data ? (
               <div>
-                <p>Color: {product.data.color}</p>
-                <p>Capacity: {product.data.capacity}</p>
+                <p>Color: {product.data?.color || 'N/A'}</p>
+                <p>Capacity: {product.data?.capacity || 'N/A'}</p>
               </div>
-            ) : (
-              <p>No additional data available.</p>
-            )}
        </div>
     ))
     
