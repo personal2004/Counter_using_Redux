@@ -1,6 +1,9 @@
-import { INCREMENT, DECREMENT } from '../actions/counterAction';
+import { INCREMENT, DECREMENT } from '../actions/action';
 
-const initialState = { value: 0 };
+ const initialState = {
+  value: 0
+};
+
 
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
